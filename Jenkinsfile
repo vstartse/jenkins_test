@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build'){
             agent {
-                docker {image 'vladstarcev/jenkins-exercise:0.0.1'}
+                docker {image 'vladstarcev/jenkins-exercise'}
             }
             steps {
                 sh 'python3 main.py'
