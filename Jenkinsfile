@@ -1,32 +1,16 @@
 pipeline {
-    agent any
+    agent {
+        
+    }
 
     environment{
         NAME = 'Vlad'
     }
 
     stages {
-        stage('fetching'){
+        stage('Test'){
             steps {
-                sh 'echo fetching'
-            }
-        }
-
-        stage('building'){
-            steps {
-                sh 'echo building'
-            }
-        }
-
-        stage('testing'){
-            steps {
-                sh 'echo testing'
-            }
-        }
-
-        stage('deploying'){
-            steps {
-                sh 'echo deploying'
+                sh 'node --version'
             }
         }
     }
